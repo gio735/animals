@@ -26,19 +26,33 @@ namespace Animalz
                 int animal = rnd.Next(1, 3);
                 if (animal == 1)
                 {
-                    Animals.Add(new Dog());
+                    Animals.Add(new Dog((Breed)rnd.Next(0, 5)));
                     Dogs++;
                     TotalAnimals++;
                     Available++;
                 }
                 else
                 {
-                    Animals.Add(new Cat());
+                    Animals.Add(new Cat((Breed)rnd.Next(5, 10)));
                     Cats++;
                     TotalAnimals++;
                     Available++;
                 }
             }
         }
+    }
+    public enum Breed
+    {
+        Auggie,
+        Bloodhound,
+        Chug,
+        Dachshund,
+        ShibaInu,
+
+        Abyssinian,
+        Birman,
+        Cymric,
+        Havana,
+        Korat
     }
 }
