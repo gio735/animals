@@ -6,7 +6,7 @@ namespace Animalz
 {
     public class Dog : Animal
     {
-        public Dog(string breed = "unknown")
+        public Dog(Breed breed)
         {
             ID = ++IDMaker;
             Breed = breed;
